@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\assets\\scripts\\kinectclimber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\kinectclimber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KinectClimber.cs",
+              "DocumentMoniker": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectClimber.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\KinectClimber.cs",
+              "ToolTip": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectClimber.cs",
+              "RelativeToolTip": "Assets\\Scripts\\KinectClimber.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwEYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T17:58:43.71Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
