@@ -707,11 +707,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257984265}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &342519958 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400054, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
-  m_PrefabInstance: {fileID: 790029742}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &435415800
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +815,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &438066413 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400152, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
+  m_PrefabInstance: {fileID: 790029742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456570413
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +905,97 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456570413}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &470905967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470905970}
+  - component: {fileID: 470905969}
+  - component: {fileID: 470905968}
+  m_Layer: 0
+  m_Name: AjustesKinect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &470905968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470905967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b9637035d55784cbbe08ec594f34d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GestureInfo: {fileID: 0}
+--- !u!114 &470905969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470905967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00db858c1f8ff90478dad0aa1bac9a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TwoUsers: 0
+  ComputeUserMap: 0
+  ComputeColorMap: 0
+  DisplayUserMap: 0
+  DisplayColorMap: 0
+  DisplaySkeletonLines: 0
+  DisplayMapsWidthPercent: 20
+  SensorHeight: 1
+  SensorAngle: 0
+  MinUserDistance: 1
+  MaxUserDistance: 0
+  DetectClosestUser: 1
+  IgnoreInferredJoints: 1
+  smoothing: 1
+  UseBoneOrientationsFilter: 0
+  UseClippedLegsFilter: 0
+  UseBoneOrientationsConstraint: 1
+  UseSelfIntersectionConstraint: 0
+  Player1Avatars: []
+  Player2Avatars: []
+  Player1CalibrationPose: 0
+  Player2CalibrationPose: 0
+  Player1Gestures: 
+  Player2Gestures: 
+  MinTimeBetweenGestures: 0.7
+  GestureListeners: []
+  CalibrationText: {fileID: 0}
+  HandCursor1: {fileID: 0}
+  HandCursor2: {fileID: 0}
+  ControlMouseCursor: 0
+  GesturesDebugText: {fileID: 0}
+  Player1Calibrated: 0
+  Player2Calibrated: 0
+--- !u!4 &470905970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470905967}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4796587, y: -0.24690087, z: -3.9059412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &544564241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1169,11 @@ MeshFilter:
 --- !u!4 &600258153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400058, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
+  m_PrefabInstance: {fileID: 790029742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &614573161 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400154, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
   m_PrefabInstance: {fileID: 790029742}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &663118810
@@ -1527,7 +1623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.374
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1535,7 +1631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.631
+      value: 1.648
       objectReference: {fileID: 0}
     - target: {fileID: 400176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2014,11 +2110,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037698119}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1084584779 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400056, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
-  m_PrefabInstance: {fileID: 790029742}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1197516942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,7 +2924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveRoot: {fileID: 1729627251}
-  addCharacterControllerIfMissing: 0
+  addCharacterControllerIfMissing: 1
   useShoulderHeading: 1
   invertForward: 1
   turnSmooth: 10
@@ -2871,22 +2962,31 @@ MonoBehaviour:
   maxReachFromHip: 2
   pullGain: 1
   climbUpBonus: 0.8
-  maxSnapPerFrame: 0.05
-  wallSnap: 0.04
+  maxSnapPerFrame: 0.025
+  wallSnap: 0
   gravityWhenFree: 9.81
-  minGripsToClimb: 2
-  hardSnapOnGrip: 1
   stepUpGain: 0.5
   minUpDelta: 0.005
   lateralGain: 0.5
   minSideDelta: 0.002
+  hipLateralGain: 0.6
+  lateralMaxPerFrame: 0.05
+  notouchReleaseTime: 0.25
+  latchPrimary: 1
+  primaryAnchorWeight: 1.5
+  primaryStepUpMul: 1.5
+  primaryLateralMul: 1.5
+  damping: 0.703
+  deadzone: 0.003
   locomotionToDisable: {fileID: 1729627248}
+  freezeAvatarRootWhenClimbing: 1
+  avatarToFreeze: {fileID: 1729627252}
   useAvatarBones: 1
   hipRef: {fileID: 1203856380}
   handLRef: {fileID: 600258153}
   handRRef: {fileID: 1905531327}
-  footLRef: {fileID: 342519958}
-  footRRef: {fileID: 1084584779}
+  footLRef: {fileID: 438066413}
+  footRRef: {fileID: 614573161}
 --- !u!4 &1729627251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400176, guid: ae23d50304c93b9418b65cec8f9fe954, type: 3}
@@ -3090,6 +3190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3128,6 +3232,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056095, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3641,8 +3753,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 182643212}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!1 &1002564991371869657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,8 +4010,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 456570413}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!4 &1601307993722710283
 Transform:
   m_ObjectHideFlags: 0
@@ -4256,8 +4378,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1866169679}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!33 &2384709957426722485
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4329,8 +4456,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1739185543}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!114 &2780814855894127325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4343,8 +4475,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1371270171}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!114 &2789886519704857742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4357,8 +4494,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1348805846}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!135 &2828078522736849433
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4436,8 +4578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 162475737}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!1 &3057490154029342280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4470,8 +4617,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 959755988}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!114 &3194610865532756761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4484,8 +4636,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 663118810}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!23 &3227079420525470789
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4624,8 +4781,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1506781290}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!33 &3766876892435598208
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4666,8 +4828,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1037698119}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!114 &4023891979769503537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4680,8 +4847,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1419568261}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!1 &4066549192941275762
 GameObject:
   m_ObjectHideFlags: 0
@@ -4984,8 +5156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 182352267}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!135 &4588839909127477952
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5019,8 +5196,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 881033267}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!4 &4633083038019081566
 Transform:
   m_ObjectHideFlags: 0
@@ -5070,8 +5252,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 757064229}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!114 &4685250415992222468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5084,8 +5271,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 2050003468}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!23 &4685591035257177059
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5210,8 +5402,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1197516942}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!135 &4898273210054092860
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5245,8 +5442,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1022096605}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!135 &4974098347440964233
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5280,8 +5482,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1689971607}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!1 &5011393470028233062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5594,8 +5801,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1590038754}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!4 &5976534995743331089
 Transform:
   m_ObjectHideFlags: 0
@@ -5913,8 +6125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1361773639}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!33 &6390572352882919228
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6007,8 +6224,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 895001186}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!135 &6485456534952063238
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6325,8 +6547,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 726200951}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!23 &7063624481016753988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6492,8 +6719,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 1472037117}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!33 &7382693784567931152
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6626,8 +6858,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 257984265}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!114 &7790455669625476958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6640,8 +6877,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 544564241}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!4 &7834763948209336816
 Transform:
   m_ObjectHideFlags: 0
@@ -6816,8 +7058,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 559018534}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!4 &8275416383430083562
 Transform:
   m_ObjectHideFlags: 0
@@ -7013,8 +7260,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 684835703}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!114 &8737619617225349501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7027,8 +7279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68adc218661d4024aa2d0076380825de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 2
   glowSphere: {fileID: 20805135}
+  sfx: {fileID: 0}
+  touchClip: {fileID: 0}
+  untouchClip: {fileID: 0}
+  gripClip: {fileID: 0}
+  ungripClip: {fileID: 0}
+  logEvents: 0
 --- !u!23 &8761782497403749201
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7280,3 +7537,4 @@ SceneRoots:
   - {fileID: 2209806364577436525}
   - {fileID: 790029742}
   - {fileID: 130256249}
+  - {fileID: 470905970}
