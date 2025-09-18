@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|c:\\users\\juand\\documents\\unity\\proyects\\kinectclimbing\\assets\\scripts\\kinecthighkneeimpulsemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\kinecthighkneeimpulsemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:2:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|c:\\users\\juand\\documents\\unity\\proyects\\kinectclimbing\\assets\\scripts\\kinecthighkneeimpulsemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\kinecthighkneeimpulsemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectClimber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\KinectClimber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|c:\\users\\juand\\documents\\unity\\proyects\\kinectclimbing\\assets\\scripts\\climbablegrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\assets\\scripts\\climbablegrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\climbablegrip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|c:\\users\\juand\\documents\\unity\\proyects\\kinectclimbing\\assets\\scripts\\kinecthighkneeimpulsemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\kinecthighkneeimpulsemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectClimber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9B44A14-D3DD-9750-D767-B956C9379776}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\KinectClimber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
               "ToolTip": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
               "RelativeToolTip": "Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAuwN8AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T18:38:52.679Z",
               "EditorCaption": ""
@@ -40,6 +44,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
+              "DocumentMoniker": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
+              "ToolTip": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
+              "RelativeToolTip": "Assets\\Scripts\\KinectHighKneeImpulseMover.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:46:16.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ClimbableGrip.cs",
               "DocumentMoniker": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\ClimbableGrip.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ClimbableGrip.cs",
@@ -47,12 +64,11 @@
               "RelativeToolTip": "Assets\\Scripts\\ClimbableGrip.cs",
               "ViewState": "AgIAACkAAAAAAAAAAADwvzoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T18:01:52.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T18:01:52.708Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "KinectClimber.cs",
               "DocumentMoniker": "C:\\Users\\juand\\Documents\\Unity\\Proyects\\KinectClimbing\\Assets\\Scripts\\KinectClimber.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\KinectClimber.cs",
@@ -60,8 +76,7 @@
               "RelativeToolTip": "Assets\\Scripts\\KinectClimber.cs",
               "ViewState": "AgIAAAACAAAAAAAAAAAIwBcCAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T17:57:36.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T17:57:36.499Z"
             }
           ]
         }

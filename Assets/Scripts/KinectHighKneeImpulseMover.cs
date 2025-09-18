@@ -10,7 +10,7 @@ public class KinectHighKneeImpulseMover : MonoBehaviour
     public Transform moveRoot;                         // moveremos ESTE transform (idealmente el padre)
     public bool addCharacterControllerIfMissing = false;
 
-    [Header("Dirección / Rotación")]
+   
     public enum HeadingMode { Shoulders = 0, Camera = 1 /*(HMD/VR)*/, }
     [Tooltip("Fuente de la dirección de avance")]
     public HeadingMode headingMode = HeadingMode.Shoulders;
