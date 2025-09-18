@@ -1,17 +1,34 @@
 using UnityEngine;
+using System.Linq;
+using System.Reflection;
 
 [RequireComponent(typeof(Animator))]
 public class KinectHighKneeImpulseMover : MonoBehaviour
 {
     [Header("Raíz de movimiento")]
     [Tooltip("Si se deja vacío, usará el padre (offset-node creado por AvatarController).")]
-    public Transform moveRoot;                 // moveremos ESTE transform (idealmente el padre)
+    public Transform moveRoot;                         // moveremos ESTE transform (idealmente el padre)
     public bool addCharacterControllerIfMissing = false;
 
-    [Header("Dirección/rotación")]
-    public bool useShoulderHeading = true;
-    public bool invertForward = true;         // <- cámbialo si sigue invertido
+    [Header("Dirección / Rotación")]
+    public enum HeadingMode { Shoulders = 0, Camera = 1 /*(HMD/VR)*/, }
+    [Tooltip("Fuente de la dirección de avance")]
+    public HeadingMode headingMode = HeadingMode.Shoulders;
+
+    [Tooltip("Cámara para HeadingMode.Camera (p.ej. la del XR Origin). Si está vacío intenta Camera.main.")]
+    public Camera headingCamera;
+
+    [Tooltip("Suavizado del heading (cuanto mayor, más suave).")]
+    public float headingSmooth = 12f;
+
+    [Tooltip("Hacer que el root también gire hacia el heading.")]
+    public bool alignRotationToHeading = true;
+
+    [Tooltip("Suavizado de giro del root si alignRotationToHeading está activo.")]
     public float turnSmooth = 10f;
+
+    [Tooltip("Sólo para heading por Kinect (hombros): invierte el sentido si queda al revés.")]
+    public bool invertForward = true;
 
     [Header("Detección de rodillas (paso)")]
     public float kneeLiftThreshold = 0.12f;
@@ -45,6 +62,14 @@ public class KinectHighKneeImpulseMover : MonoBehaviour
 
     bool calibrated; float baseDL, baseDR, calibT, needCalibTime = 0.8f;
 
+    // heading suavizado
+    Vector3 smoothedHeading = Vector3.forward;
+    bool headingInitialized = false;
+
+    // Anti-recentrado
+    private Vector3 _desiredPos;
+    private bool _haveDesired;
+
     void Awake()
     {
         // mover el PADRE (offset-node) para no pelear con AvatarController
@@ -57,6 +82,9 @@ public class KinectHighKneeImpulseMover : MonoBehaviour
             cc = moveRoot.gameObject.AddComponent<CharacterController>();
             cc.radius = 0.3f; cc.height = 1.7f; cc.center = new Vector3(0, 0.9f, 0);
         }
+
+        // Auto-resolver cámara si falta (útil en VR)
+        if (!headingCamera) headingCamera = Camera.main;
 
         hipC = (int)KinectWrapper.NuiSkeletonPositionIndex.HipCenter;
         kneeL = (int)KinectWrapper.NuiSkeletonPositionIndex.KneeLeft;
@@ -78,21 +106,24 @@ public class KinectHighKneeImpulseMover : MonoBehaviour
         if (!km.IsJointTracked(userId, hipC) || !km.IsJointTracked(userId, kneeL) || !km.IsJointTracked(userId, kneeR))
         { ResetState(); return; }
 
-        // 1) Rotación/dirección (en moveRoot)
-        if (useShoulderHeading && km.IsJointTracked(userId, shL) && km.IsJointTracked(userId, shR))
+        // 1) Calcular heading (dirección de mirar)
+        Vector3 heading = ComputeHeading();
+        if (!headingInitialized)
         {
-            Vector3 sL = km.GetJointPosition(userId, shL);
-            Vector3 sR = km.GetJointPosition(userId, shR);
-            Vector3 across = sR - sL; across.y = 0f;
-            Vector3 forwardK = Vector3.Cross(Vector3.up, across).normalized;
+            smoothedHeading = heading;
+            headingInitialized = true;
+        }
+        else
+        {
+            float t = Mathf.Clamp01(headingSmooth * Time.deltaTime);
+            smoothedHeading = Vector3.Slerp(smoothedHeading, heading, t);
+        }
 
-            if (forwardK.sqrMagnitude > 1e-4f)
-            {
-                Vector3 fwd = new Vector3(forwardK.x, 0f, -forwardK.z); // invierte Z de Kinect v1
-                if (invertForward) fwd = -fwd;
-                Quaternion target = Quaternion.LookRotation(fwd);
-                moveRoot.rotation = Quaternion.Slerp(moveRoot.rotation, target, turnSmooth * Time.deltaTime);
-            }
+        // Rotar el root hacia el heading si se desea
+        if (alignRotationToHeading && smoothedHeading.sqrMagnitude > 1e-6f)
+        {
+            Quaternion target = Quaternion.LookRotation(smoothedHeading);
+            moveRoot.rotation = Quaternion.Slerp(moveRoot.rotation, target, turnSmooth * Time.deltaTime);
         }
 
         // 2) Lectura de rodillas y pasos
@@ -141,43 +172,69 @@ public class KinectHighKneeImpulseMover : MonoBehaviour
             }
         }
 
-        // 3) Aplicar impulso en moveRoot
+        // 3) Aplicar impulso en la dirección de mirada
         Vector3 move = Vector3.zero;
-        if (remainingImpulse > 0f && impulseDuration > 0f)
+        if (remainingImpulse > 0f && impulseDuration > 0f && smoothedHeading.sqrMagnitude > 1e-6f)
         {
             float stepDist = Mathf.Min(remainingImpulse, (impulseDistance / impulseDuration) * Time.deltaTime);
             remainingImpulse -= stepDist;
-            move += moveRoot.forward * stepDist;
+            move += smoothedHeading * stepDist;
         }
 
         move.y -= gravity * Time.deltaTime;
         cc.Move(move);
 
-        // Actualiza la posición objetivo tras nuestro movimiento de este frame
+        // Anti-recentrado: guardar posición objetivo
         _desiredPos = moveRoot.position;
         _haveDesired = true;
-
     }
 
     // --- Anti-recentrado: mantener la última posición deseada del moveRoot ---
-    private Vector3 _desiredPos;
-    private bool _haveDesired;
-
     void LateUpdate()
     {
         if (!cc || !moveRoot) return;
 
-        // Si aún no tenemos objetivo, tomamos el actual
         if (!_haveDesired) { _desiredPos = moveRoot.position; _haveDesired = true; return; }
 
-        // Si algún otro sistema "reseteó" el moveRoot (salto brusco hacia atrás),
-        // reponemos la posición deseada para que NO regrese al origen.
-        float snapBackThreshold = 0.20f; // 20 cm: ajusta si hace falta
+        float snapBackThreshold = 0.20f; // 20 cm
         float dist = Vector3.Distance(moveRoot.position, _desiredPos);
         if (dist > snapBackThreshold)
         {
-            moveRoot.position = _desiredPos; // vuelve a donde lo dejamos
+            moveRoot.position = _desiredPos;
         }
+    }
+
+    // ---- Helpers ----
+    Vector3 ComputeHeading()
+    {
+        // 1) Cámara (VR/HMD): usar forward de la cámara, proyectado en el plano XZ
+        if (headingMode == HeadingMode.Camera && headingCamera)
+        {
+            Vector3 f = headingCamera.transform.forward;
+            f.y = 0f;
+            if (f.sqrMagnitude > 1e-6f) return f.normalized;
+        }
+
+        // 2) Hombros (Kinect): similar a la versión original
+        if (km.IsJointTracked(userId, shL) && km.IsJointTracked(userId, shR))
+        {
+            Vector3 sL = km.GetJointPosition(userId, shL);
+            Vector3 sR = km.GetJointPosition(userId, shR);
+            Vector3 across = sR - sL; across.y = 0f;
+            Vector3 forwardK = Vector3.Cross(Vector3.up, across).normalized;
+
+            if (forwardK.sqrMagnitude > 1e-6f)
+            {
+                // Convertir a coords de Unity (Kinect v1 Z invertido)
+                Vector3 fwd = new Vector3(forwardK.x, 0f, -forwardK.z);
+                if (invertForward) fwd = -fwd;
+                return fwd;
+            }
+        }
+
+        // 3) Fallback: forward actual del root
+        Vector3 fallback = moveRoot.forward; fallback.y = 0f;
+        return fallback.sqrMagnitude > 1e-6f ? fallback.normalized : Vector3.forward;
     }
 
     void ResetState()
@@ -187,5 +244,9 @@ public class KinectHighKneeImpulseMover : MonoBehaviour
         lastStepTime = 0f;
         lastStepSide = Side.None;
         remainingImpulse = 0f;
+
+        headingInitialized = false;
+        smoothedHeading = Vector3.forward;
+        _haveDesired = false;
     }
 }
